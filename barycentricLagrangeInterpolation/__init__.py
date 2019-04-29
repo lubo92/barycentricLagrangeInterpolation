@@ -1,0 +1,1 @@
+from barycentricLagrangeInterpolation.barycentricLagrangeInterpolation import *
