@@ -37,5 +37,11 @@ The code provided in this package closeley follows this paper:
 
 [Berrut, Jean-Paul, and Trefethen, Lloyd N. "Barycentric lagrange interpolation." SIAM review 46.3 (2004): 501-517.] (https://people.maths.ox.ac.uk/trefethen/barycentric.pdf)
 
+## Examples
+An usage example Jupyter notebook is provided in the file example.ipynb.
+
+## Applications
+I wrote this class as a utility class for a differential equation solver. For details see my other repositories.
+
 ## Contact
 If you have any questions - on the application of this package as well as on the mathematical background - don't hesitate to send an email to <w.lub92@gmail.com>.
