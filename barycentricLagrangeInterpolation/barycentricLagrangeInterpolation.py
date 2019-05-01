@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class InterpolatingFunction(object):
-    def _init_(self):
+    def __init__(self):
         print('initializing Blasius solver class')
         plt.rcParams["figure.figsize"] = [20, 7]
         
@@ -19,7 +19,6 @@ class InterpolatingFunction(object):
         nodes = -np.cos(j*np.pi/(nNodes-1))
         
         if plot:
-            plt.rcParams["figure.figsize"] = [20, 7]
             plt.grid(True)
             plt.plot(nodes,np.zeros(nNodes),'x')
             plt.show()
@@ -42,7 +41,6 @@ class InterpolatingFunction(object):
         weights[-1]/=2
         
         if plot:
-            plt.rcParams["figure.figsize"] = [20, 7]
             plt.grid(True)
             plt.plot(nodes,weights,'x')
             plt.show()
