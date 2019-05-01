@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 class InterpolatingFunction(object):
     def __init__(self):
-        print('initializing Blasius solver class')
+        print('initializing interpolating function class')
         plt.rcParams["figure.figsize"] = [20, 7]
         
     def calculateNodes(self,nNodes,plot=False):
