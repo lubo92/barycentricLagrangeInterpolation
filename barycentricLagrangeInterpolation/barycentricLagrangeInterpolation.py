@@ -83,8 +83,7 @@ class InterpolatingFunction(object):
         
         Parameters:
         values (ndarray[nNodes]): values at sampling points
-        basis (ndarray[nNodes,n]): the basis functions as calculatet with
-        corresponding functiong
+        basis (ndarray[nNodes,n]): the basis functions
 
         Returns:
         ndarray[n] : the interpolation function at n equidistant points
@@ -93,11 +92,31 @@ class InterpolatingFunction(object):
         nPoints = len(basis[0])
         p = np.sum(np.repeat(np.reshape(values,(nNodes,1)),nPoints,axis=1)*basis,axis=0)
         if plot:
-            plt.plot(np.linspace(-1,1,1000),p)
+            plt.plot(np.linspace(-1,1,nPoints),p)
             plt.plot(nodes,values,'x')
             plt.grid(True)
             plt.show()
         return(p)
+    
+    def evaluateFunction(self,point,values,weights,nodes):
+        """Evaluates the interpolating function at one given point
+        
+        Parameters:
+        point (double): point at which the function shall be evaluated, from the intervall [-1,1]
+        values (ndarray[nNodes]): values at sampling points
+        basis (ndarray[nNodes,n]): the basis functions
+
+        Returns:
+        double: the value of interpolating function at given point
+        """
+        # point is node
+        if nodes.__contains__(point):
+            return(values[nodes==point][0])
+        else:
+            nNodes = len(nodes)
+            #temp1 = w_j/(x-x_j)
+            temp1 = weights/(point-nodes)
+            return(np.sum(temp1*values)/np.sum(temp1))
     
     def derivative(self,values,matrix):
         """Calculates the m-th derivateive of a function at barycentric nodes
