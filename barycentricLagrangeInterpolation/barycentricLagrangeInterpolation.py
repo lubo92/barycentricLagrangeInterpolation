@@ -109,14 +109,14 @@ class InterpolatingFunction(object):
         Returns:
         double: the value of interpolating function at given point
         """
-        # point is node
+        #point is node
         if nodes.__contains__(point):
             return(values[nodes==point][0])
         else:
             nNodes = len(nodes)
-            #temp1 = w_j/(x-x_j)
-            temp1 = weights/(point-nodes)
-            return(np.sum(temp1*values)/np.sum(temp1))
+           #temp1 = w_j/(x-x_j)
+        temp1 = weights/(point-nodes)
+        return(np.sum(temp1*values)/np.sum(temp1))
     
     def derivative(self,values,matrix):
         """Calculates the m-th derivateive of a function at barycentric nodes
