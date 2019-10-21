@@ -111,7 +111,7 @@ class InterpolatingFunction(object):
         """
         #point is node
         if nodes.__contains__(point):
-            return(values[nodes==point][0])
+            return(values[np.where(nodes==point)[0][0]])
         else:
             nNodes = len(nodes)
            #temp1 = w_j/(x-x_j)
