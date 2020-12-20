@@ -1,5 +1,10 @@
 # Barycentric Lagrange Interpolation
 
+## Literature and Mathematical Background
+The code provided in this package closeley follows this paper:
+
+[Berrut, Jean-Paul, and Trefethen, Lloyd N. "Barycentric lagrange interpolation." SIAM review 46.3 (2004): 501-517.] (https://people.maths.ox.ac.uk/trefethen/barycentric.pdf)
+
 ## What does this package provide?
 This package provides the functioalities to interpolate a one dimensional function known at some sampling points with a barycentric Lagrange method. Furthermore you can differentiate the interpolated function. Also higher derivatives are supported. All this functionality is implemented within a Python class in numpy. Plots are provided by matplotlib.
 
@@ -32,7 +37,7 @@ Or if your Python installation requires root permission:
 sudo -H python3 setup.py install
 ```
 
-## Mathematical Background and Literature
+## Literature and Mathematical Background
 The code provided in this package closeley follows this paper:
 
 [Berrut, Jean-Paul, and Trefethen, Lloyd N. "Barycentric lagrange interpolation." SIAM review 46.3 (2004): 501-517.] (https://people.maths.ox.ac.uk/trefethen/barycentric.pdf)
